@@ -15,17 +15,35 @@ function ProjectCard({ project }) {
     >
       <h3>{project.title}</h3>
       <h5>{project.timeline}</h5>
+      <div>
+        {project.playlink ? <a className="project-link">Play</a> : <></>}
+        {project.playlink && project.sourcecode ? <span> | </span> : <></>}
+        {project.sourcecode ? (
+          <a className="project-link">Source Code</a>
+        ) : (
+          <></>
+        )}
+      </div>
+
       <img
         src={project.image}
         alt={project.title}
         className={isExpanded ? "enlarged" : ""}
       />
-      {isExpanded ? (
+      {isExpanded && project.fullDescription ? (
         <p>{project.fullDescription}</p>
       ) : (
         <p>{project.description}</p>
       )}
-      {isExpanded ? <p>Read less</p> : <p>Read more</p>}
+      {project.fullDescription ? (
+        isExpanded ? (
+          <p>Read less</p>
+        ) : (
+          <p>Read more</p>
+        )
+      ) : (
+        <></>
+      )}
     </div>
   );
 }
