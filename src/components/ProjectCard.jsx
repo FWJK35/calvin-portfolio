@@ -9,17 +9,22 @@ function ProjectCard({ project }) {
   };
 
   return (
-    <div
-      className={`project-card ${isExpanded ? "expanded" : ""}`}
-      onClick={toggleExpand}
-    >
+    <div className={`project-card ${isExpanded ? "expanded" : ""}`}>
       <h3>{project.title}</h3>
       <h5>{project.timeline}</h5>
       <div>
-        {project.playlink ? <a className="project-link">Play</a> : <></>}
+        {project.playlink ? (
+          <a className="project-link" href={project.playlink}>
+            Play
+          </a>
+        ) : (
+          <></>
+        )}
         {project.playlink && project.sourcecode ? <span> | </span> : <></>}
         {project.sourcecode ? (
-          <a className="project-link">Source Code</a>
+          <a className="project-link" href={project.sourcecode}>
+            Source Code
+          </a>
         ) : (
           <></>
         )}
@@ -29,6 +34,7 @@ function ProjectCard({ project }) {
         src={project.image}
         alt={project.title}
         className={isExpanded ? "enlarged" : ""}
+        onClick={toggleExpand}
       />
       {isExpanded && project.fullDescription ? (
         <p>{project.fullDescription}</p>
@@ -37,9 +43,13 @@ function ProjectCard({ project }) {
       )}
       {project.fullDescription ? (
         isExpanded ? (
-          <p>Read less</p>
+          <p className="readmore" onClick={toggleExpand}>
+            Read less
+          </p>
         ) : (
-          <p>Read more</p>
+          <p className="readmore" onClick={toggleExpand}>
+            Read more
+          </p>
         )
       ) : (
         <></>

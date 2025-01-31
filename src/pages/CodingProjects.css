@@ -1,3 +1,6 @@
+.coding-projects {
+  padding: 2.5%;
+}
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));

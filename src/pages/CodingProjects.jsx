@@ -1,6 +1,6 @@
 import React from "react";
 import ProjectCard from "../components/ProjectCard";
-//import assetlist from "../assets/assetlist";
+import "./CodingProjects.css";
 
 function CodingProjects() {
   const projects = [
@@ -62,7 +62,7 @@ function CodingProjects() {
         "Harmony is a programming language interpreter written fully in Java. It \
       takes a text file input and parses through it using a set of custom keywords to identify and execute\
       code functions. It has an indentation-based syntactic stye similar to Python, and is \
-      Turing-complete, having all the necessary building blocks to code itself from scratch. It can get input\
+      Turing-complete, having all the necessary building blocks to code itself from scratch. It can get input,\
       define variables, functions, run loops, check conditionals, and more. All variables are auto-cast to\
       types, so String + Int = String syntax is valid.",
       image: "/harmony.gif",
