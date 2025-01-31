@@ -1,4 +1,7 @@
 .navbar {
+  position: relative;
+  left: 0;
+  top: 0;
   background-color: #333;
   overflow: hidden;
   width: 100%;

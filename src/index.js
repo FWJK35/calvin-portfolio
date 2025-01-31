@@ -17,6 +17,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route errorElement={<NotFound />} element={<App />}>
       <Route path="/" element={<Home />} />
+      <Route path="/index.html" element={<Home />} />
       <Route path="/printing" element={<PrintingProjects />} />
       <Route path="/coding" element={<CodingProjects />} />
     </Route>

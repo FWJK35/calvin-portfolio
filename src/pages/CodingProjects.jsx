@@ -5,6 +5,15 @@ import ProjectCard from "../components/ProjectCard";
 function CodingProjects() {
   const projects = [
     {
+      id: 5,
+      title: "Evergreen Escape",
+      timeline: "January 2025",
+      description:
+        "A multiplayer co-op infinitely generatig maze exploration game with bullet-hell style combat encounters",
+      fullDescription: "Full description",
+      image: "/evergreen.gif",
+    },
+    {
       id: 4,
       title: "Clore",
       timeline: "January 2024 - June 2024",
