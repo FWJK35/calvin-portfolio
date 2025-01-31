@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./ProjectCard.css";
 
 function ProjectCard({ project }) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -13,6 +14,7 @@ function ProjectCard({ project }) {
       onClick={toggleExpand}
     >
       <h3>{project.title}</h3>
+      <h5>{project.timeline}</h5>
       <img
         src={project.image}
         alt={project.title}
@@ -23,6 +25,7 @@ function ProjectCard({ project }) {
       ) : (
         <p>{project.description}</p>
       )}
+      {isExpanded ? <p>Read less</p> : <p>Read more</p>}
     </div>
   );
 }

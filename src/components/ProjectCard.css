@@ -1,0 +1,22 @@
+.project-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.project-card.expanded {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.project-card img {
+  max-width: 100%;
+  height: auto;
+  transition: all 0.3s ease;
+}
+
+.project-card img.enlarged {
+  max-width: 100%;
+  height: auto;
+}
